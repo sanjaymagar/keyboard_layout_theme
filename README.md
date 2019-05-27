@@ -1,6 +1,9 @@
 # keyboard_layout_theme
 
-Thanks to Andrej Sharapov for this beautiful keyboard theme css codepen. If you want to learn more then click this link [Andrej Sharapov]('https://codepen.io/andrejsharapov/pen/pmdNKW)
+Thanks to Andrej Sharapov for this beautiful keyboard theme css codepen. If you want to learn more then click this link
+[Andrej Sharapov]('https://codepen.io/andrejsharapov/pen/pmdNKW 'Andrej Sharapov')
+
+https://codepen.io/andrejsharapov/pen/pmdNKW
 
 ![blacktheme](./screenshot/keyboard_theme.gif)
 
