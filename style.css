@@ -1,0 +1,250 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", Helvetica, sans-serif;
+    background-color: #000;
+    transition: all 500ms linear;
+}
+
+body.one {
+    background-color: #000;
+}
+
+body.one .switcher {
+    color: white;
+}
+
+body.one .base {
+    background-color: #202020;
+}
+
+body.one .key {
+    border-color: #666 #333 black #333;
+    background-color: #202020;
+}
+
+body.one .col {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+body.two {
+    background-color: #fff;
+}
+
+body.two .switcher {
+    color: black;
+}
+
+body.two .base {
+    background-color: #282828;
+}
+
+body.two .key {
+    border-color: #777 #555 #555 #555;
+    background-color: #3a3a3a;
+}
+
+body.two .col {
+    color: #990000;
+    border-color: #990000;
+}
+
+body.three {
+    background-color: #fff;
+}
+
+body.three .switcher {
+    color: black;
+}
+
+body.three .base {
+    background-color: #c5c5c5;
+}
+
+body.three .key {
+    color: black;
+    border-color: #999 #777 #666 #777;
+    background-color: #f3f3f3;
+}
+
+body.three .col {
+    color: #900000;
+    border-color: #900000;
+}
+
+body.three .green {
+    color: #009900 !important;
+    border-color: #009900 !important;
+}
+
+body.three .green svg {
+    fill: #009900;
+}
+
+body.three svg {
+    fill: black;
+}
+
+.base {
+    position: relative;
+    transform: scale(0.7);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(30, 30px);
+    grid-template-rows: repeat(5, 60px);
+    grid-gap: 5px;
+    border-bottom: 3px solid #777;
+    border-radius: 10px;
+    background-color: #202020;
+}
+
+@media (max-width: 768px) {
+    .base {
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width: 540px) {
+    .base {
+        transform: scale(0.3);
+    }
+}
+
+.base .stand {
+    position: absolute;
+    z-index: -1;
+    top: calc(100% + 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    border-bottom: 4px solid #777;
+    border-radius: 0 0 100% 100%;
+    background-color: inherit;
+    transition: all 200ms ease;
+}
+
+.base .stand.open {
+    height: 180px;
+}
+
+.key {
+    padding-top: 17px;
+    grid-column: span 2;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border-color: #666 #333 black #333;
+    border-style: solid;
+    border-width: 1px 2px 4px 2px;
+    border-radius: 5px;
+    background-color: #202020;
+}
+
+.key:active,
+.key.active {
+    transform: translateY(2px) scale(0.98);
+    border-bottom-width: 2px;
+}
+
+.key:focus {
+    outline: none;
+}
+
+.key svg {
+    fill: white;
+}
+
+.key.col {
+    color: red;
+    border-color: red;
+}
+
+.key.red {
+    color: red !important;
+    border-color: red !important;
+}
+
+.key.red svg {
+    fill: #ff0000;
+}
+
+.key.green {
+    color: #00ff00 !important;
+    border-color: #00ff00 !important;
+}
+
+.key.green svg {
+    fill: #00ff00;
+}
+
+.key.delete {
+    grid-column: span 4;
+}
+
+.key.tab {
+    grid-column: span 3;
+}
+
+.key.backslash {
+    grid-column: span 3;
+}
+
+.key.capslock {
+    grid-column: span 4;
+}
+
+.key.return {
+    grid-column: span 4;
+}
+
+.key.leftshift {
+    grid-column: span 5;
+}
+
+.key.rightshift {
+    grid-column: span 5;
+}
+
+.key.leftctrl {
+    grid-column: span 3;
+}
+
+.key.command {
+    grid-column: span 2;
+}
+
+.key.rightctrl {
+    grid-column: span 3;
+}
+
+.key.gr {
+    grid-column: span 3;
+}
+
+.key.space {
+    grid-column: span 13;
+}
+
+.switcher {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
